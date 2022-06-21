@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace MiniShopApp.WebUI.Migrations
 {
-    public partial class InitialDatabase : Migration
+    public partial class InitialIdentity : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

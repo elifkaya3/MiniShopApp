@@ -26,8 +26,8 @@ namespace MiniShopApp.Data.Migrations
                 {
                     CategoryId = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
-                    Name = table.Column<string>(type: "TEXT", nullable: true),
-                    Description = table.Column<string>(type: "TEXT", nullable: true),
+                    Name = table.Column<string>(type: "TEXT", maxLength: 50, nullable: false),
+                    Description = table.Column<string>(type: "TEXT", maxLength: 500, nullable: false),
                     Url = table.Column<string>(type: "TEXT", nullable: true)
                 },
                 constraints: table =>
@@ -73,7 +73,8 @@ namespace MiniShopApp.Data.Migrations
                     ImageUrl = table.Column<string>(type: "TEXT", nullable: true),
                     Url = table.Column<string>(type: "TEXT", nullable: true),
                     IsApproved = table.Column<bool>(type: "INTEGER", nullable: false),
-                    IsHome = table.Column<bool>(type: "INTEGER", nullable: false)
+                    IsHome = table.Column<bool>(type: "INTEGER", nullable: false),
+                    DateAdded = table.Column<DateTime>(type: "TEXT", nullable: false, defaultValueSql: "date('now')")
                 },
                 constraints: table =>
                 {

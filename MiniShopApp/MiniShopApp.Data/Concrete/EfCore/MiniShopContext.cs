@@ -32,6 +32,7 @@ namespace MiniShopApp.Data.Concrete.EfCore
         {
             modelBuilder.ApplyConfiguration(new ProductConfig());
             modelBuilder.ApplyConfiguration(new ProductCategoryConfig());
+            modelBuilder.ApplyConfiguration(new CategoryConfig());
 
             modelBuilder.Seed();
         }

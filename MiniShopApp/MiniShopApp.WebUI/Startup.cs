@@ -35,6 +35,9 @@ namespace MiniShopApp.WebUI
             services.AddDbContext<ApplicationContext>(options => options.UseSqlite(Configuration.GetConnectionString("SqLiteConnection")));
             services.AddDbContext<MiniShopContext>(options => options.UseSqlite(Configuration.GetConnectionString("SqLiteConnection")));
 
+            //services.AddDbContext<ApplicationContext>(options => options.UseSqlServer(Configuration.GetConnectionString("MsSqlConnection")));
+            //services.AddDbContext<MiniShopContext>(options => options.UseSqlServer(Configuration.GetConnectionString("MsSqlConnection")));
+
             services.AddIdentity<User, IdentityRole>().AddEntityFrameworkStores<ApplicationContext>().AddDefaultTokenProviders();
 
             services.Configure<IdentityOptions>(options =>

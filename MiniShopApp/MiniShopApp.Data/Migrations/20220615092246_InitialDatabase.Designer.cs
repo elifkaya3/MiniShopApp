@@ -9,7 +9,7 @@ using MiniShopApp.Data.Concrete.EfCore;
 namespace MiniShopApp.Data.Migrations
 {
     [DbContext(typeof(MiniShopContext))]
-    [Migration("20220613120345_InitialDatabase")]
+    [Migration("20220615092246_InitialDatabase")]
     partial class InitialDatabase
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -63,9 +63,13 @@ namespace MiniShopApp.Data.Migrations
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("Description")
+                        .IsRequired()
+                        .HasMaxLength(500)
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(50)
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Url")
@@ -192,6 +196,11 @@ namespace MiniShopApp.Data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
+                    b.Property<DateTime>("DateAdded")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("TEXT")
+                        .HasDefaultValueSql("date('now')");
+
                     b.Property<string>("Description")
                         .HasColumnType("TEXT");
 
@@ -223,6 +232,7 @@ namespace MiniShopApp.Data.Migrations
                         new
                         {
                             ProductId = 1,
+                            DateAdded = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Bu telefon çok iyi bir telefon.",
                             ImageUrl = "1.png",
                             IsApproved = true,
@@ -234,6 +244,7 @@ namespace MiniShopApp.Data.Migrations
                         new
                         {
                             ProductId = 2,
+                            DateAdded = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Bu telefon çok iyi bir telefon.",
                             ImageUrl = "2.png",
                             IsApproved = true,
@@ -245,6 +256,7 @@ namespace MiniShopApp.Data.Migrations
                         new
                         {
                             ProductId = 3,
+                            DateAdded = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Bu telefon çok iyi bir telefon.",
                             ImageUrl = "3.png",
                             IsApproved = true,
@@ -256,6 +268,7 @@ namespace MiniShopApp.Data.Migrations
                         new
                         {
                             ProductId = 4,
+                            DateAdded = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Bu telefon çok iyi bir telefon.",
                             ImageUrl = "4.png",
                             IsApproved = true,
@@ -267,6 +280,7 @@ namespace MiniShopApp.Data.Migrations
                         new
                         {
                             ProductId = 5,
+                            DateAdded = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Bu telefon çok iyi bir telefon.",
                             ImageUrl = "5.png",
                             IsApproved = true,
@@ -278,6 +292,7 @@ namespace MiniShopApp.Data.Migrations
                         new
                         {
                             ProductId = 6,
+                            DateAdded = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Bu telefon çok iyi bir telefon.",
                             ImageUrl = "6.png",
                             IsApproved = true,
@@ -289,6 +304,7 @@ namespace MiniShopApp.Data.Migrations
                         new
                         {
                             ProductId = 7,
+                            DateAdded = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Bu telefon çok iyi bir telefon.",
                             ImageUrl = "7.png",
                             IsApproved = true,
@@ -300,6 +316,7 @@ namespace MiniShopApp.Data.Migrations
                         new
                         {
                             ProductId = 8,
+                            DateAdded = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Bu telefon çok iyi bir telefon.",
                             ImageUrl = "8.png",
                             IsApproved = true,
@@ -311,6 +328,7 @@ namespace MiniShopApp.Data.Migrations
                         new
                         {
                             ProductId = 9,
+                            DateAdded = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Bu telefon çok iyi bir telefon.",
                             ImageUrl = "9.png",
                             IsApproved = true,
@@ -322,6 +340,7 @@ namespace MiniShopApp.Data.Migrations
                         new
                         {
                             ProductId = 10,
+                            DateAdded = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Bu telefon çok iyi bir telefon.",
                             ImageUrl = "10.png",
                             IsApproved = true,
@@ -333,6 +352,7 @@ namespace MiniShopApp.Data.Migrations
                         new
                         {
                             ProductId = 11,
+                            DateAdded = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Bu telefon çok iyi bir telefon.",
                             ImageUrl = "11.png",
                             IsApproved = true,
@@ -344,6 +364,7 @@ namespace MiniShopApp.Data.Migrations
                         new
                         {
                             ProductId = 12,
+                            DateAdded = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Bu telefon çok iyi bir telefon.",
                             ImageUrl = "12.png",
                             IsApproved = true,
@@ -355,6 +376,7 @@ namespace MiniShopApp.Data.Migrations
                         new
                         {
                             ProductId = 13,
+                            DateAdded = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Bu telefon çok iyi bir telefon.",
                             ImageUrl = "13.png",
                             IsApproved = true,

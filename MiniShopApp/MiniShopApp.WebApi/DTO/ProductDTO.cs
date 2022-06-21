@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
-namespace MiniShopApp.Entity
+namespace MiniShopApp.WebApi.DTO
 {
-    public class Product
+    public class ProductDTO
     {
         public int ProductId { get; set; }
         public string Name { get; set; }
@@ -11,9 +13,5 @@ namespace MiniShopApp.Entity
         public string Description { get; set; }
         public string ImageUrl { get; set; }
         public string Url { get; set; }
-        public bool IsApproved { get; set; }
-        public bool IsHome { get; set; }
-        public DateTime DateAdded { get; set; }
-        public List<ProductCategory> ProductCategories { get; set; }
     }
 }

@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MiniShopApp.Data", "MiniSho
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MiniShopApp.Business", "MiniShopApp.Business\MiniShopApp.Business.csproj", "{EBAD99F1-4A1E-4F96-AF80-26A82D5567A0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniShopApp.Core", "MiniShopApp.Core\MiniShopApp.Core.csproj", "{47DA57B7-F5DF-4560-A6C0-4CDE3E44441C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MiniShopApp.Core", "MiniShopApp.Core\MiniShopApp.Core.csproj", "{47DA57B7-F5DF-4560-A6C0-4CDE3E44441C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniShopApp.WebApi", "MiniShopApp.WebApi\MiniShopApp.WebApi.csproj", "{C3856F26-3B34-4EDD-A597-4AEA899140F4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{47DA57B7-F5DF-4560-A6C0-4CDE3E44441C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{47DA57B7-F5DF-4560-A6C0-4CDE3E44441C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{47DA57B7-F5DF-4560-A6C0-4CDE3E44441C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3856F26-3B34-4EDD-A597-4AEA899140F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3856F26-3B34-4EDD-A597-4AEA899140F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3856F26-3B34-4EDD-A597-4AEA899140F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3856F26-3B34-4EDD-A597-4AEA899140F4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
